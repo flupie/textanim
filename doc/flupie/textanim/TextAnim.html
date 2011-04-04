@@ -1,0 +1,260 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><meta name="keywords" content="TextAnim,flupie.textanim.TextAnim,BOTTOM,CENTER,CENTER_EDGES,CHARS,COMPLETE,EDGES_CENTER,FIRST_LAST,LAST_FIRST,LEFT,LINES,PROGRESS,RANDOM,RIGHT,START,TOP,WORDS,anchorX,anchorY,blocksVisible,delay,effects,firstBlock,htmlText,index,interval,length,mode,nextBlock,onBlocksCreated,onComplete,onProgress,onStart,posX,posY,source,split,text,text,textAnim,textField,textFormat,texture,time,vars,applyEffect,clearTexture,create,debug,dispose,dispose,forEachBlocks,getColorBounds,setAnchor,setGradientLinear,setPattern,showAnchors,start,stop,toBitmap,toVector,updateRegistration"><title>flupie.textanim.TextAnim</title></head><body><script language="javascript" type="text/javascript" src="../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../help.js"></script><script language="javascript" type="text/javascript" src="../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'TextAnim - TextAnim Documentation';
+				var baseRef = '../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">TextAnim Documentation</td><td class="titleTableTopNav" align="right"><a href="../../package-summary.html" onclick="loadClassListFrame('../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../class-summary.html" onclick="loadClassListFrame('../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../all-index-A.html" onclick="loadClassListFrame('../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../index.html?flupie/textanim/TextAnim.html&amp;flupie/textanim/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">TextAnim</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("TextAnim"); titleBar_setSubNav(false,true,false	,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">flupie.textanim</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  TextAnim</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">TextAnim  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> flash.display.Sprite</td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td></tr></table><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9 and later</td></tr></table><p></p><p></p><p></p>
+	              <p>A class for dynamic text animation in actionscript 3.</p>
+	              <p>TextAnim works creating blocks of text, then applying functions that you create to each one of them.
+	We call these functions as <code>effects</code>. These functions must receives a TextAnimBlock as a parameter.</p>
+	              <p>
+                  <b>Here is the most basic example</b>:</p>
+		             <pre>
+                  <code>
+	import flupie.textanim.TextAnim;
+	import flupie.textanim.TextAnimBlock;
+	 
+	var myTextAnim:TextAnim = new TextAnim(myTextField);
+	myTextAnim.effects = myEffect;
+	myTextAnim.start();
+	
+	function myEffect(block:TextAnimBlock):void {
+		block.scaleY = 2;
+	}</code>
+               </pre>
+		          <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#anchorX" class="signatureLink">anchorX</a> : String<div class="summaryTableDescription">
+			The horizontal registration of each TextAnimBlock.</div></td><td class="summaryTableOwnerCol">TextAnim</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#anchorY" class="signatureLink">anchorY</a> : String<div class="summaryTableDescription">
+			The vertical registration of each TextAnimBlock.</div></td><td class="summaryTableOwnerCol">TextAnim</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#blocksVisible" class="signatureLink">blocksVisible</a> : Boolean<div class="summaryTableDescription">
+			Sets the visibility of all blocks.</div></td><td class="summaryTableOwnerCol">TextAnim</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#delay" class="signatureLink">delay</a> : Number = 0<div class="summaryTableDescription">
+			Sets the delay (in milliseconds) before start.</div></td><td class="summaryTableOwnerCol">TextAnim</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#effects" class="signatureLink">effects</a> : *<div class="summaryTableDescription">
+		Are the effect functions that will be called for all blocks, according to the interval specified.</div></td><td class="summaryTableOwnerCol">TextAnim</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#firstBlock" class="signatureLink">firstBlock</a> : <a href="../../flupie/textanim/TextAnimBlock.html">TextAnimBlock</a><div class="summaryTableDescription">
+			The first block reference.</div></td><td class="summaryTableOwnerCol">TextAnim</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#htmlText" class="signatureLink">htmlText</a> : String<div class="summaryTableDescription">
+		Sets a html as text.</div></td><td class="summaryTableOwnerCol">TextAnim</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#interval" class="signatureLink">interval</a> : Number = 100<div class="summaryTableDescription">
+			Sets the interval (in milliseconds) between each effect dispatch.</div></td><td class="summaryTableOwnerCol">TextAnim</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#length" class="signatureLink">length</a> : int<div class="summaryTableDescription">
+		Amount of TextAnimBlocks.</div></td><td class="summaryTableOwnerCol">TextAnim</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#mode" class="signatureLink">mode</a> : String<div class="summaryTableDescription">
+			Is the way of the effects dispatches will be occurs.</div></td><td class="summaryTableOwnerCol">TextAnim</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#onBlocksCreated" class="signatureLink">onBlocksCreated</a> : Function<div class="summaryTableDescription">
+			Callback function called when the blocks are created, or recreated.</div></td><td class="summaryTableOwnerCol">TextAnim</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#onComplete" class="signatureLink">onComplete</a> : Function<div class="summaryTableDescription">
+			Callback function called when the last effect was dispatched.</div></td><td class="summaryTableOwnerCol">TextAnim</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#onProgress" class="signatureLink">onProgress</a> : Function<div class="summaryTableDescription">
+			Callback function called when each effect dispatch.</div></td><td class="summaryTableOwnerCol">TextAnim</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#onStart" class="signatureLink">onStart</a> : Function<div class="summaryTableDescription">
+			Callback function called when the TextAnim starts.</div></td><td class="summaryTableOwnerCol">TextAnim</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#source" class="signatureLink">source</a> : TextField<div class="summaryTableDescription">
+		The original TextField instance thats TextAnim will use as reference.</div></td><td class="summaryTableOwnerCol">TextAnim</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#split" class="signatureLink">split</a> : String<div class="summaryTableDescription">
+			To specify how the TextAnim will break the text: in chars, words or lines.</div></td><td class="summaryTableOwnerCol">TextAnim</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#text" class="signatureLink">text</a> : String<div class="summaryTableDescription">
+			Changes the text.</div></td><td class="summaryTableOwnerCol">TextAnim</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#time" class="signatureLink">time</a> : Number = 0<div class="summaryTableDescription">
+			Indicates a fixed total time (in milliseconds) of effects dispatches.</div></td><td class="summaryTableOwnerCol">TextAnim</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#TextAnim()" class="signatureLink">TextAnim</a>(source:TextField, autoReplace:Boolean = true)</div><div class="summaryTableDescription">
+			Constructor.</div></td><td class="summaryTableOwnerCol">TextAnim</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#applyEffect()" class="signatureLink">applyEffect</a>(block:<a href="../../flupie/textanim/TextAnimBlock.html">TextAnimBlock</a>):void</div><div class="summaryTableDescription">
+		To apply the effects to a single block.</div></td><td class="summaryTableOwnerCol">TextAnim</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#create()" class="signatureLink">create</a>(source:TextField, config:Object = null):<a href="../../flupie/textanim/TextAnim.html">TextAnim</a></div><div class="summaryTableDescription">[static] 
+		Creates an instance of TextAnim in a fast way.</div></td><td class="summaryTableOwnerCol">TextAnim</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#dispose()" class="signatureLink">dispose</a>():void</div><div class="summaryTableDescription">
+			Clear all blocks, internal references, stops the progress and kill the TextAnim instance.</div></td><td class="summaryTableOwnerCol">TextAnim</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#forEachBlocks()" class="signatureLink">forEachBlocks</a>(callback:Function):void</div><div class="summaryTableDescription">
+			Apply a function to each block of this TextAnim.</div></td><td class="summaryTableOwnerCol">TextAnim</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setAnchor()" class="signatureLink">setAnchor</a>(anchorX:String, anchorY:String):void</div><div class="summaryTableDescription">
+			Modify the registration x and y of all blocks.</div></td><td class="summaryTableOwnerCol">TextAnim</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#start()" class="signatureLink">start</a>(delay:Number = 0):void</div><div class="summaryTableDescription">
+			Starts the flow of effects dispatches, with delay specified.</div></td><td class="summaryTableOwnerCol">TextAnim</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#stop()" class="signatureLink">stop</a>():void</div><div class="summaryTableDescription">
+			Stops the flow of effects dispatches.</div></td><td class="summaryTableOwnerCol">TextAnim</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="anchorX"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">anchorX</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>anchorX:String</code><p></p><p></p><p>
+			The horizontal registration of each TextAnimBlock.
+					<p>It can be <code>TextAnimAnchor.CENTER, TextAnimAnchor.LEFT, TextAnimAnchor.RIGHT</code></p>	
+			</p><p> The default value is <code>TextAnimAnchor.CENTER;</code>.</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get anchorX():String</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set anchorX(value:String):void</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="TextAnim.html#setAnchor" target="">setAnchor</a></div></div><a name="propertyDetail"></a><a name="anchorY"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">anchorY</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>anchorY:String</code><p></p><p></p><p>
+			The vertical registration of each TextAnimBlock.
+					<p>It can be <code>TextAnimAnchor.CENTER, TextAnimAnchor.TOP, TextAnimAnchor.BOTTOM</code></p>	
+			</p><p> The default value is <code>TextAnimAnchor.CENTER;</code>.</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get anchorY():String</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set anchorY(value:String):void</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="TextAnim.html#setAnchor" target="">setAnchor</a></div></div><a name="propertyDetail"></a><a name="blocksVisible"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">blocksVisible</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>blocksVisible:Boolean</code><p></p><p></p><p>
+			Sets the visibility of all blocks. 
+			<p>Change the <code>visible</code> property of each block.
+		In some animations the blocks must be hidden, to show them gradually.</p>
+		</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get blocksVisible():Boolean</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set blocksVisible(value:Boolean):void</code><br/></div><a name="propertyDetail"></a><a name="delay"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">delay</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var delay:Number = 0</code><p></p><p></p><p>
+			Sets the delay (in milliseconds) before start.
+		
+			</p><p> The default value is <code>0</code>.</p></div><a name="propertyDetail"></a><a name="effects"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">effects</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var effects:*</code><p></p><p></p><p>
+		Are the effect functions that will be called for all blocks, according to the interval specified.
+		<p>It can be an <code>Array</code> of functions or just one. These functions must receives a TextAnimBlock as a parameter.</p>
+		<p><b>Example:</b></p>
+		<code>
+		myTextAnim.effects = effect1Function;
+		</code><p>or</p><code>
+		myTextAnim.effects = [effect1Function, effect2Function];
+		</code>
+		</p></div><a name="propertyDetail"></a><a name="firstBlock"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">firstBlock</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var firstBlock:<a href="../../flupie/textanim/TextAnimBlock.html">TextAnimBlock</a></code><p></p><p></p><p>
+			The first block reference.
+		<p>TextAnim has a singly linked list of blocks, and this is the head of the list.</p>
+		
+		</p><p> The default value is <code>null</code>.</p></div><a name="propertyDetail"></a><a name="htmlText"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">htmlText</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>htmlText:String</code><p></p><p></p><p>
+		Sets a html as text. Like <code>text</code>, all the blocks will be recreated.
+		
+		</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get htmlText():String</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set htmlText(value:String):void</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="TextAnim.html#text" target="">text</a></div></div><a name="propertyDetail"></a><a name="interval"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">interval</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var interval:Number = 100</code><p></p><p></p><p>
+			Sets the interval (in milliseconds) between each effect dispatch.
+		<p>If the interval is 300, it means that the TextAnim will dispatch an effect each 300 milliseconds, 
+		until all the blocks are animated.</p>
+		
+			</p><p> The default value is <code>100</code>.</p></div><a name="propertyDetail"></a><a name="length"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">length</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var length:int</code><p></p><p></p><p>
+		Amount of TextAnimBlocks.
+		</p></div><a name="propertyDetail"></a><a name="mode"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">mode</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var mode:String</code><p></p><p></p><p>
+			Is the way of the effects dispatches will be occurs.
+		<p><b>TextAnim dispatch effects in five diferent ways</b>:
+		<ul>
+		<li>TextAnimMode.FIRST_LAST - Begins with the first char and ends with last (left to right).</li>
+		<li>TextAnimMode.LAST_FIRST - Begins with the last char and ends with first.</li>
+		<li>TextAnimMode.EDGES_CENTER - Begins with the first and last, then evolues to center.</li>
+		<li>TextAnimMode.CENTER_EDGES - Begins in the central chars and evolues to edges.</li>
+		<li>TextAnimMode.RANDOM - Animate randomly.</li>
+		</ul>
+		</p>
+		
+			</p><p> The default value is <code>TextAnimMode.FIRST_LAST</code>.</p></div><a name="propertyDetail"></a><a name="onBlocksCreated"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">onBlocksCreated</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var onBlocksCreated:Function</code><p></p><p></p><p>
+			Callback function called when the blocks are created, or recreated.
+			<p>It occurs when the <code>split</code> or <code>text</code> changes.</p> 
+		
+		</p><p> The default value is <code>null</code>.</p></div><a name="propertyDetail"></a><a name="onComplete"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">onComplete</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var onComplete:Function</code><p></p><p></p><p>
+			Callback function called when the last effect was dispatched.
+		<pre><code>
+		import flupie.textanim.TextAnim;
+		
+		var myTextAnim:TextAnim = new TextAnim(myTextField);
+		myTextAnim.effects = myEffect;
+		myTextAnim.onComplete = function():void {
+			trace("text animation completed!");
+		}
+		myTextAnim.start();
+		</code></pre>
+		
+		</p><p> The default value is <code>null</code>.</p></div><a name="propertyDetail"></a><a name="onProgress"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">onProgress</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var onProgress:Function</code><p></p><p></p><p>
+			Callback function called when each effect dispatch.
+		<pre><code>
+		import flupie.textanim.TextAnim;
+		
+		var myTextAnim:TextAnim = new TextAnim(myTextField);
+		myTextAnim.effects = myEffect;
+		myTextAnim.onProgress = function():void {
+			trace("effect was dispatched.");
+		}
+		myTextAnim.start();
+		</code></pre>
+		
+		</p><p> The default value is <code>null</code>.</p></div><a name="propertyDetail"></a><a name="onStart"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">onStart</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var onStart:Function</code><p></p><p></p><p>
+			Callback function called when the TextAnim starts.
+		<p>Runs only after delay setted.</p>
+		<pre><code>
+		import flupie.textanim.TextAnim;
+		
+		var myTextAnim:TextAnim = new TextAnim(myTextField);
+		myTextAnim.effects = myEffect;
+		myTextAnim.delay = 1000;
+		myTextAnim.onStart = function():void {
+			trace("textAnim starts after 1 second");
+		}
+		myTextAnim.start();
+		</code></pre>
+		
+		</p><p> The default value is <code>null</code>.</p></div><a name="propertyDetail"></a><a name="source"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">source</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var source:TextField</code><p></p><p></p><p>
+		The original TextField instance thats TextAnim will use as reference. 
+		<p>Can be any textField, since it has an embed font.</p>
+		</p></div><a name="propertyDetail"></a><a name="split"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">split</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>split:String</code><p></p><p></p><p>
+			To specify how the TextAnim will break the text: in chars, words or lines.
+		<p>Everytime split changes, the blocks will be recreated automatically, 
+		keeping the text and appearance.</p>
+		<p><code>
+		myTextAnim.split = TextAnimSplit.WORDS; //this instance will be splitted in words.
+		</code>
+		</p>
+			
+		</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get split():String</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set split(value:String):void</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="TextAnimSplit.html" target="">TextAnimSplit</a></div></div><a name="propertyDetail"></a><a name="text"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">text</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>text:String</code><p></p><p></p><p>
+			Changes the text. All the blocks will be recreated.
+		<p>The first value will be the same of the source's text. 
+		If you need use html as text, use <code>htmlText</code>.</p>
+		
+		</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get text():String</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set text(value:String):void</code><br/><p><span class="label">See also</span></p><div class="seeAlso"><a href="TextAnim.html#htmlText" target="">htmlText</a></div></div><a name="propertyDetail"></a><a name="time"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">time</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var time:Number = 0</code><p></p><p></p><p>
+			Indicates a fixed total time (in milliseconds) of effects dispatches.
+			<p>A value of 5000 means the last dispatch will occurs 5 seconds after the first dispatch.
+		Interval is ignored if time has a value higher than 0.</p>
+		      
+			</p><p> The default value is <code>0</code>.</p></div><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><a name="TextAnim()"></a><a name="TextAnim(flash.text.TextField,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">TextAnim</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function TextAnim(source:TextField, autoReplace:Boolean = true)</code><p></p><p>
+			Constructor. Receives a TextField instance and instruction to replace that automatically.
+		<p>The source <code>TextField</code> must have the <b>font embbeded</b>.</p>
+		
+		<p>TextAnim will use the source as reference to create and organize TextAnimBlocks to looks 
+		identical to the source text. If the source already is in displayList, TextAnim can self add 
+		in displayList in the same position/depth with autoReplace setted as true.</p>
+		<p>
+		By default, TextAnim creates the first set of blocks with the source text, but you can change this text
+		everytime you want, using <code>text</code> or <code>htmlText</code> properties.
+		</p>
+		
+		<p>
+		Auto-replacement if the source textField is in displayList:
+		<code>
+		var anim:TextAnim = new TextAnim(myTextField);
+		</code>
+		</p>
+		Without auto-replacement, then you need do add settings manually:
+		<pre><code>
+		var anim:TextAnim = new TextAnim(myTextField);
+		myTextField.x = 50;
+		myTextField.y = 100;
+		addChild(myTextField);
+		</code></pre> 
+					</p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">source</span>:TextField</code> &mdash; The TextField instance that TextAnim will be based.
+			</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">autoReplace</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; Do a replacement removing the source and placing this TextAnim instance in the same scope, with same positions. (works only if the source textfield was in display list). 
+		
+		</td></tr></table></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="applyEffect()"></a><a name="applyEffect(flupie.textanim.TextAnimBlock)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">applyEffect</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function applyEffect(block:<a href="../../flupie/textanim/TextAnimBlock.html">TextAnimBlock</a>):void</code><p></p><p></p><p>
+		To apply the effects to a single block.
+		<p>Use when you need play the <code>effects</code> just to one block:
+		<code>myTextAnim.applyEffect(myTextAnimBlock);</code>
+		</p>
+		
+			</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">block</span>:<a href="../../flupie/textanim/TextAnimBlock.html">TextAnimBlock</a></code> &mdash; The target block who plays the instance effects.
+		</td></tr></table></p></div><a name="create()"></a><a name="create(flash.text.TextField,Object)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">create</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function create(source:TextField, config:Object = null):<a href="../../flupie/textanim/TextAnim.html">TextAnim</a></code><p></p><p></p><p>
+		Creates an instance of TextAnim in a fast way.
+		<p>If you needs a fast text animation, hit:</p>
+		<code>
+		TextAnim.create(myTextField, {effects:myEffect, split:TextAnimSplit.WORDS}).start();
+			</code>
+		<p>or:</p>
+		<pre><code>
+		var anim:TextAnim = TextAnim.create(myTextField, {effects:myEffect, interval:50, split:TextAnimSplit.WORDS});
+		anim.start(500); //delay to start (in milliseconds)
+		</code></pre>
+		
+		</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">source</span>:TextField</code> &mdash; The TextField instance that TextAnim will be based.
+		</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">config</span>:Object</code> (default = <code>null</code>)<code></code> &mdash; Additional instance settings, like time, blocksVisible, etc.
+		</td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../flupie/textanim/TextAnim.html">TextAnim</a></code> &mdash; TextAnim an instance of TextAnim.
+		</td></tr></table></div><a name="dispose()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">dispose</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function dispose():void</code><p></p><p></p><p>
+			Clear all blocks, internal references, stops the progress and kill the TextAnim instance.
+		<p>Do it when the instance of TextAnim is not needed anymore. Delete blocks, remove references and clear memory.</p>
+		<pre><code>
+		myTextAnim.dispose();
+		myTextAnim = null;
+		</code></pre>
+		</p></div><a name="forEachBlocks()"></a><a name="forEachBlocks(Function)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">forEachBlocks</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function forEachBlocks(callback:Function):void</code><p></p><p></p><p>
+			Apply a function to each block of this TextAnim.
+		<p>Offers access to all blocks of textAnim instance.</p>
+		<pre><code>
+		myTextAnim.forEachBlocks = function(block:TextAnimBlock):void {
+			block.alpha = .5;
+			trace(block.index, block.text); //index number of block (ID)
+		};
+		</code></pre>
+					</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">callback</span>:Function</code> &mdash; The function that will be applied to each block.
+		</td></tr></table></p></div><a name="setAnchor()"></a><a name="setAnchor(String,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setAnchor</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setAnchor(anchorX:String, anchorY:String):void</code><p></p><p></p><p>
+			Modify the registration x and y of all blocks.
+		
+			</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">anchorX</span>:String</code> &mdash; The horizontal registration (TextAnimAnchor.LEFT, TextAnimAnchor.RIGHT and TextAnimAnchor.CENTER).
+			</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">anchorY</span>:String</code> &mdash; The vertical registration (TextAnimAnchor.TOP, TextAnimAnchor.BOTTOM and TextAnimAnchor.CENTER). 
+		</td></tr></table></p></div><a name="start()"></a><a name="start(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">start</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function start(delay:Number = 0):void</code><p></p><p></p><p>
+			Starts the flow of effects dispatches, with delay specified.
+		<p><code>
+		myTextAnim.start(2000); //This instance will start after 2 seconds.
+		</code></p>
+			
+		</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">delay</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; The time (in milliseconds) thats TextAnim will wait to execute the first dispatch.
+			
+		</td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="TextAnim.html#stop" target="">stop</a><br/><a href="TextAnim.html#delay" target="">delay</a></div></div><a name="stop()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">stop</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function stop():void</code><p></p><p></p><p>
+			Stops the flow of effects dispatches.
+		<p>The effects, onProgress and textAnimEvent.PROGRESS dispatches stops.
+		The onComplete will not be dispatched, except that animation starts again.</p>
+		
+			</p><p><span class="label">See also</span></p><div class="seeAlso"><a href="TextAnim.html#start" target="">start</a></div></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>(c) Copyright 2009 - MIT LICENSE. All Rights Reserved. http://code.google.com/p/textanim</footer><br/>Fri Apr 16 2010, 12:01 PM -03:00  </center></div></body></html><!--(c) Copyright 2009 - MIT LICENSE. All Rights Reserved. http://code.google.com/p/textanim<br/>Fri Apr 16 2010, 12:01 PM -03:00  -->
